@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TSE-NACIONAL</title>
+</head>
+<body>
+    <h1>Sistema Eleitoral</h1>
+    Digite a sua idade: <input type="number" name="txtid" id="txtid"> anos<br><br>
+    <input type="button" value="verificar" onclick="verificar()">
+    <div id="res">
+
+    </div>
+    <script>
+        function verificar() {
+            var txtano = window.document.getElementById('txtid')
+            var res = window.document.querySelector('div#res')
+            var idade = Number(txtano.value)
+            res.innerHTML = `<p>A sua idades atual é <strong>${idade} anos</strong></p>`
+            if(idade >= 18) {
+                res.innerHTML += `Você já esta apto para <strong>votar!</strong>`
+            }
+            res.innerHTML += `Vote consciente, para bem de todos!`
+        }
+    </script>
+</body>
+</html>
